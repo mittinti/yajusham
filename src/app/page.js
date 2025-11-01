@@ -6,7 +6,7 @@ import { Play, Pause, RotateCcw, Repeat, Repeat1, ChevronRight, BookOpen, Volume
 // Load lesson configuration from JSON
 const loadLessonConfig = async (lessonId) => {
   try {
-    const response = await fetch(`/lessons/${lessonId}/config.json`);
+    const response = await fetch(`/yajusham/lessons/${lessonId}/config.json`);
     if (!response.ok) throw new Error('Config not found');
     return await response.json();
   } catch (error) {
@@ -18,7 +18,7 @@ const loadLessonConfig = async (lessonId) => {
 // Load list of available main lessons
 const loadMainLessonsList = async () => {
   try {
-    const response = await fetch('/lessons/index.json');
+    const response = await fetch('/yajusham/lessons/index.json');
     if (!response.ok) throw new Error('Index not found');
     return await response.json();
   } catch (error) {
@@ -206,22 +206,22 @@ const AudioPlayer = ({ audioSrc, title }) => {
 const LessonContent = ({ lessonId, anuvakamId, panasaId, title }) => {
   const getImagePath = () => {
     if (panasaId && anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.png`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.png`;
     }
     if (anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/image.png`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/image.png`;
     }
-    return `/lessons/${lessonId}/image.png`;
+    return `/yajusham/lessons/${lessonId}/image.png`;
   };
 
   const getAudioPath = () => {
     if (panasaId && anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/${panasaId}/audio.mp3`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/audio.mp3`;
     }
     if (anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/audio.mp3`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/audio.mp3`;
     }
-    return `/lessons/${lessonId}/audio.mp3`;
+    return `/yajusham/lessons/${lessonId}/audio.mp3`;
   };
 
   return (
