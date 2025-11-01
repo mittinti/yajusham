@@ -1,0 +1,25 @@
+{
+    "id": "arunam",
+    "title": "Aranyakam - Arunam",
+    "description": "Aruna Prashna",
+    "anuvakams": [
+      {
+        "id": "anuvakam-1",
+        "title": "Anuvakam 1",
+        "panasas": [
+          {
+            "id": "panasa-1",
+            "title": "Panasa 1"
+          },
+          {
+            "id": "panasa-2",
+            "title": "Panasa 2"
+          },
+          {
+            "id": "panasa-3",
+            "title": "Panasa 3"
+          }
+        ]
+      }
+    ]
+  }
