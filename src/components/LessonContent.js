@@ -6,12 +6,12 @@ import AudioPlayer from './AudioPlayer';
 export default function LessonContent({ lessonId, anuvakamId, panasaId, title, autoPlay }) {
   const getImagePath = () => {
     if (panasaId && anuvakamId) {
-      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.jpg`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.png`;
     }
     if (anuvakamId) {
-      return `/yajusham/lessons/${lessonId}/${anuvakamId}/image.jpg`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/image.png`;
     }
-    return `/yajusham/lessons/${lessonId}/image.jpg`;
+    return `/yajusham/lessons/${lessonId}/image.png`;
   };
 
   const getAudioPath = () => {
