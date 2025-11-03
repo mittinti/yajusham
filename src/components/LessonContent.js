@@ -6,22 +6,22 @@ import AudioPlayer from './AudioPlayer';
 export default function LessonContent({ lessonId, anuvakamId, panasaId, title, autoPlay }) {
   const getImagePath = () => {
     if (panasaId && anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.jpg`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/image.jpg`;
     }
     if (anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/image.jpg`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/image.jpg`;
     }
-    return `/lessons/${lessonId}/image.jpg`;
+    return `/yajusham/lessons/${lessonId}/image.jpg`;
   };
 
   const getAudioPath = () => {
     if (panasaId && anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/${panasaId}/audio.mp3`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/${panasaId}/audio.mp3`;
     }
     if (anuvakamId) {
-      return `/lessons/${lessonId}/${anuvakamId}/audio.mp3`;
+      return `/yajusham/lessons/${lessonId}/${anuvakamId}/audio.mp3`;
     }
-    return `/lessons/${lessonId}/audio.mp3`;
+    return `/yajusham/lessons/${lessonId}/audio.mp3`;
   };
 
   return (
